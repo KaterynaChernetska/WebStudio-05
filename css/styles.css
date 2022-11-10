@@ -46,7 +46,6 @@ button {
 /* ------------------------------стилізація хедеру ------------------------------*/
 .header {
   border-bottom: 1px solid var(--border-color);
-  
 }
 .container {
   width: 100%;
@@ -90,28 +89,30 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link.current {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .item {
-  position:relative;
+  position: relative;
 }
 
 .current::after {
-  content:'';
+  content: "";
   border-radius: 2px;
-  height:2px;
+  height: 4px;
   width: 100%;
   background-color: var(--accent-color);
-  display:block;
+  display: block;
   position: absolute;
-  bottom: -1px;;
+  bottom: 0;
+  transform: translateY(50%);
 }
 /* --------------------стилізація контактної інформації------------------ */
 .contacts a {
@@ -148,6 +149,7 @@ button {
 .contacts-global-icon:focus {
   color: var(--accent-color);
   fill: currentColor;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contacts:hover,
@@ -227,6 +229,7 @@ button {
   background-color: var(--main-button-active);
   color: var(--primary-white-color);
   cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* -----------------------------------------------заголовки секцій --------------------*/
 .section-title {
@@ -303,26 +306,24 @@ button {
 }
 .work-title {
   position: absolute;
-  bottom:0;
-  width:370px;
-  height:70px;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
   font-weight: 700;
   font-size: inherit;
   line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
-  margin:0;
+  margin: 0;
   padding-top: 27px;
   /* padding-bottom: 27px; */
   text-transform: uppercase;
   color: var(--primary-white-color);
   background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
-    );
-
-
+    to right,
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8)
+  );
 }
 /*------------------------------------------ секція наша команда----------------------- */
 .team-list {
@@ -386,6 +387,7 @@ button {
 .social-link:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------------------------------------------------КЛІЄНТИ -------------------------- */
@@ -417,6 +419,7 @@ button {
 .clients-link:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------------------------------------------підвал сайту--  -------------------------- */
@@ -475,6 +478,7 @@ button {
 .address-link-phone:hover,
 .address-link-phone:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-wrap {
@@ -500,7 +504,6 @@ button {
   justify-content: center;
 }
 
-
 .footer-link {
   display: inline-flex;
   justify-content: center;
@@ -519,6 +522,7 @@ button {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
   outline: transparent;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* -------------------------------------------сторінка портфоліо -----------------------------*/
 .buttons {
@@ -552,6 +556,7 @@ button {
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------------------------------Наші проекти --------------------------------- */
@@ -568,8 +573,10 @@ button {
 
 .card a:hover,
 .card a:focus {
+  opacity: 1;
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
     0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects a {
   text-decoration: none;
@@ -599,4 +606,32 @@ button {
   border: 1px solid #eeeeee;
   border-top: none;
   background-color: var(--primary-white-color);
+}
+.card-text {
+  margin: 0;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--primary-white-color);
+  letter-spacing: 0.03em;
+  position: absolute;
+  top: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+}
+.card-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover .card-text {
+  opacity: 1;
+  transition: 250ms ease cubic-bezier(0.4, 0, 0.2, 1) linear;
+  transform: translateY(0);
 }
