@@ -89,15 +89,16 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link.current {
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .item {
   position: relative;
@@ -138,18 +139,23 @@ button {
   justify-content: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contacts {
   align-self: center;
   fill: currentColor;
   margin-right: 10px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-global-icon:hover,
 .contacts-global-icon:focus {
   color: var(--accent-color);
   fill: currentColor;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contacts:hover,
@@ -222,14 +228,15 @@ button {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   min-width: 216px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.primary:hover,
 .button.primary:focus {
   background-color: var(--main-button-active);
-  color: var(--primary-white-color);
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* -----------------------------------------------заголовки секцій --------------------*/
 .section-title {
@@ -379,6 +386,9 @@ button {
   width: 44px;
   border-radius: 50%;
   color: var(--svg-color);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-social {
   fill: currentColor;
@@ -387,7 +397,6 @@ button {
 .social-link:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------------------------------------------------КЛІЄНТИ -------------------------- */
@@ -410,6 +419,9 @@ button {
   border: 1px solid var(--svg-color);
   border-radius: 4px;
   color: var(--svg-color);
+  transition-property: border-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-clients {
   fill: currentColor;
@@ -419,7 +431,6 @@ button {
 .clients-link:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------------------------------------------підвал сайту--  -------------------------- */
@@ -451,6 +462,9 @@ button {
   line-height: 1.5;
   display: inline-block;
   margin-bottom: 9px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .actual-address {
   color: var(--primary-white-color);
@@ -460,6 +474,9 @@ button {
   line-height: 1.5;
   display: inline-block;
   margin-bottom: 9px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link-phone {
   color: var(--footer--link);
@@ -469,6 +486,9 @@ button {
   line-height: 1.5;
   display: inline-block;
   margin-bottom: 0;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .actual-address:hover,
@@ -478,7 +498,6 @@ button {
 .address-link-phone:hover,
 .address-link-phone:focus {
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-wrap {
@@ -513,7 +532,11 @@ button {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--primary-white-color);
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .icon-footer {
   fill: currentColor;
 }
@@ -521,8 +544,6 @@ button {
 .footer-li a:hover {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
-  outline: transparent;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* -------------------------------------------сторінка портфоліо -----------------------------*/
 .buttons {
@@ -548,6 +569,9 @@ button {
   border-radius: 4px;
   padding: 6px 22px;
   border: 1px solid transparent;
+  transition-property: color, box-shadow, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.secondary:hover,
 .button.secondary:focus {
@@ -556,7 +580,6 @@ button {
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------------------------------Наші проекти --------------------------------- */
@@ -570,13 +593,17 @@ button {
   display: flex;
   width: calc((100% - 60px) / 3);
 }
+.card a {
+  transition-property: box-shadow, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .card a:hover,
 .card a:focus {
   opacity: 1;
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
     0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects a {
   text-decoration: none;
@@ -620,10 +647,13 @@ button {
 
   width: 100%;
   height: 100%;
+  overflow: auto;
 
   opacity: 0;
+  transition-property: transform, opacity;
   transform: translateY(100%);
-  transition: transform 250ms ease;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-box {
   position: relative;
@@ -632,6 +662,56 @@ button {
 
 .card:hover .card-text {
   opacity: 1;
-  transition: 250ms ease cubic-bezier(0.4, 0, 0.2, 1) linear;
   transform: translateY(0);
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transform: scale(1);
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+
+  transition-property: visibility, opacity, transform;
+  transition-duration: 1500ms;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.is-hidden {
+  transform: scale(0.5);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--primary-white-color);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
